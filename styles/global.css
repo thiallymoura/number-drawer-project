@@ -44,3 +44,35 @@
     --text-label-small: 600 1rem/1.5 var(--font-family-flex);
 
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background-primary);
+    /* background-image: url('../assets/background.png'); */
+}
+
+
+h1 {
+    font: var(--text-large);
+    color: var(--content-primary);
+    text-transform: uppercase;
+}
+
+h2 {
+    font: var(--text-paragraph-medium);
+    color: var(--content-brand);
+}
+
+p {
+    font: var(--text-paragraph-small);
+    color: var(--content-secondary);
+}
+
+.grid {
+    display: grid;
+}
