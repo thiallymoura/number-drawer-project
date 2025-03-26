@@ -15,7 +15,72 @@
 </head>
 
 <body>
+    <main>
+        <header>
+            <img src="./assets/logo.svg" alt="Logo Numbers" class="logo">
+        </header>
 
+        <section>
+
+            <div class="left-content">
+                <p class="text-header">Online - gratuito</p>
+                <h1>Sorteador de números</h1>
+
+                <div class="cards ">
+                    <div class="card">
+                        <img src="./assets/icons/new.svg" alt="icone de conversa">
+                        <div class="card-content">
+                            <h2>Como funciona o sorteador de números?</h2>
+                            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do
+                                intervalo
+                                especificado pelo usuário.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./assets/icons/new.svg" alt="icone de conversa">
+                        <div class="card-content">
+                            <h2>Posso escolher o intervalo dos números?</h2>
+                            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-content">
+                <h3>Quero sortear:</h3>
+                <p class="right-description">defina o intervalo e a quantidade de números, clique em "Sortear" e veja os
+                    resultados na tela. É
+                    rápido e fácil!
+                </p>
+
+                <form class="form-container">
+                    <div class="form-row">
+                        <label for="quantidade">NÚMEROS</label>
+                        <input type="number" id="quantidade" value="2" class="btn">
+                    </div>
+                    <div class="form-row">
+                        <label for="min">DE</label>
+                        <input type="number" id="min" value="1">
+                    </div>
+                    <div class="form-row">
+                        <label for="max">ATÉ</label>
+                        <input type="number" id="max" value="100">
+                    </div>
+                </form>
+
+                <label class="checkbox-container">
+                    <input type="checkbox"> Não repetir número
+                </label>
+
+                <button class="sortear-btn">Sortear
+                </button>
+            </div>
+
+        </section>
+    </main>
 </body>
 
 </html>
