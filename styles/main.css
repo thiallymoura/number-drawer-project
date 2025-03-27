@@ -101,7 +101,7 @@ main {
 
                     &:focus,
                     &:hover {
-                        border: 1px solid #D586E0;
+                        border: 1px solid var(--accent-pink);
                     }
                 }
             }
@@ -235,8 +235,6 @@ main {
                 padding-left: 0;
 
             }
-
-
         }
     }
 }
