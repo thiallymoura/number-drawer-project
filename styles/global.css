@@ -45,17 +45,22 @@
 
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 body {
     background-color: var(--background-primary);
-    /* background-image: url('../assets/background.png'); */
-}
+    position: relative;
+    overflow-x: hidden;
+    justify-content: center;
 
+    & #bg-shape {
+        position: absolute;
+        z-index: -2;
+        background: linear-gradient(-180deg, rgba(0, 0, 0, 0.9) 22.66%, rgba(0, 0, 0, 0.54) 100%), url(../assets/background.png);
+        height: 100%;
+        left: -50%;
+        bottom: 0;
+        width: 200%;
+    }
+}
 
 h1 {
     font: var(--text-large);

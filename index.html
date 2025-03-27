@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <div id="bg-shape"></div>
     <main>
         <header>
             <img src="./assets/logo.svg" alt="Logo Numbers" class="logo">
@@ -59,15 +60,15 @@
                 <form class="form-container">
                     <div class="form-row">
                         <label for="quantidade">NÚMEROS</label>
-                        <input type="number" id="quantidade" value="2" class="btn">
+                        <input type="text" id="quantidade" value="2" aria-label="" class="btn btn-md ">
                     </div>
                     <div class="form-row">
                         <label for="min">DE</label>
-                        <input type="number" id="min" value="1">
+                        <input type="text" id="min" value="1">
                     </div>
                     <div class="form-row">
                         <label for="max">ATÉ</label>
-                        <input type="number" id="max" value="100">
+                        <input type="text" id="max" value="100">
                     </div>
                 </form>
 
@@ -75,12 +76,16 @@
                     <input type="checkbox"> Não repetir número
                 </label>
 
-                <button class="sortear-btn">Sortear
+                <button class="sortear-btn">
+                    Sortear
+                    <img src="./assets/icons/seta.svg" alt="imagem da seta">
                 </button>
             </div>
 
         </section>
     </main>
+
+
 </body>
 
 </html>
