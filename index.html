@@ -59,16 +59,16 @@
 
                 <form class="form-container">
                     <div class="form-row">
-                        <label for="quantidade">NÚMEROS</label>
-                        <input type="text" id="quantidade" value="2" aria-label="" class="btn btn-md ">
+                        <label for="amount">NÚMEROS</label>
+                        <input type="text" id="amount" value="2" class="amount">
                     </div>
                     <div class="form-row">
                         <label for="min">DE</label>
-                        <input type="text" id="min" value="1">
+                        <input type="text" id="min" value="1" class="amount">
                     </div>
                     <div class="form-row">
                         <label for="max">ATÉ</label>
-                        <input type="text" id="max" value="100">
+                        <input type="text" id="max" value="100" class="amount">
                     </div>
                 </form>
 
@@ -76,16 +76,27 @@
                     <input type="checkbox"> Não repetir número
                 </label>
 
-                <button class="sortear-btn">
-                    Sortear
+                <button id="btn" class="sortear-btn">
+                    SORTEAR
                     <img src="./assets/icons/seta.svg" alt="imagem da seta">
+                </button>
+            </div>
+
+            <!-- resultado do sorteio -->
+            <div id="resultado-final" style="display: none;" class="resultado-container">
+                <h3>Resultado do sorteio</h3>
+                <p id="numero-sorteio">1º resultado</p>
+                <div id="numeros-sorteados" class="numeros"></div>
+                <button id="btn-new" class="sortear-btn">
+                    SORTEAR NOVAMENTE
+                    <img src="./assets/icons/play.svg" alt="ícone de seta">
                 </button>
             </div>
 
         </section>
     </main>
 
-
+    <script src="scripts.js"></script>
 </body>
 
 </html>
