@@ -57,7 +57,7 @@
                     rápido e fácil!
                 </p>
 
-                <form class="form-container">
+                <form class="form-container" method="post" enctype="multipart/form-data">
                     <div class="form-row">
                         <label for="amount">NÚMEROS</label>
                         <input type="text" id="amount" value="2" class="amount">
@@ -73,7 +73,7 @@
                 </form>
 
                 <label class="checkbox-container">
-                    <input type="checkbox"> Não repetir número
+                    <input id="repeat" type="checkbox"> Não repetir número
                 </label>
 
                 <button id="btn" class="sortear-btn">
@@ -83,14 +83,27 @@
             </div>
 
             <!-- resultado do sorteio -->
-            <div id="resultado-final" style="display: none;" class="resultado-container">
+            <div id="end-result" style="display: none;" class="result-container">
                 <h3>Resultado do sorteio</h3>
-                <p id="numero-sorteio">1º resultado</p>
-                <div id="numeros-sorteados" class="numeros"></div>
-                <button id="btn-new" class="sortear-btn">
+                <p id="drawn-number">1º resultado</p>
+                <div id="drawn-numbers" class="numbers"></div>
+
+                <button id="btn-new" class="btn-new">
                     SORTEAR NOVAMENTE
-                    <img src="./assets/icons/play.svg" alt="ícone de seta">
+                    <img src="./assets/icons/play.svg" alt="ícone de play">
                 </button>
+
+                <div class="btn-container">
+                    <button id="btn-back" class="btn-back">
+                        <img src="./assets/icons/arrow-back.svg" alt="ícone de voltar">
+                        VOLTAR
+                    </button>
+
+                    <button id="btn-reset" class="btn-reset">
+                        <img src="./assets/icons/reset.svg" alt="ícone de reiniciar">
+                        REINICIAR
+                    </button>
+                </div>
             </div>
 
         </section>

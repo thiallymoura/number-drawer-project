@@ -1,4 +1,4 @@
-.resultado-container {
+.result-container {
     width: 34rem;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
 
     }
 
-    & #numero-sorteio {
+    & #drawn-number {
         font: var(--text-overline);
         color: var(--content-secondary);
         text-transform: uppercase;
@@ -23,10 +23,11 @@
 
     }
 
-    & .numeros {
+    & .numbers {
         font-size: 2rem;
         font-weight: bold;
         margin: 1.5rem 0;
+
         animation: fadeIn 0.8s ease-in-out;
 
     }
@@ -39,8 +40,98 @@
         font: 3rem var(--font-family-mono);
         display: inline-block;
         margin-bottom: 2.5rem;
+
+
+        /* A animação */
+        animation:
+            fadeIn 2s ease-in-out forwards,
+            scale 500ms forwards ease,
+            diminuteScale 500ms ease 2s forwards,
+            colorInverse 100ms linear 900ms forwards,
+            colorReturn 100ms linear 2s forwards;
+    }
+
+    & .btn-new {
+
+        all: unset;
+        width: 100%;
+        height: 3.5rem;
+        background-color: var(--background-tertiary);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        color: var(--content-primary);
+        font: var(--text-label-small);
+
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            border-radius: inherit;
+            width: 101%;
+            height: 3.7rem;
+            top: -0.1rem;
+            bottom: 0;
+            background: var(--background-border) repeat;
+            visibility: hidden;
+        }
+
+        &:hover {
+            background-color: var(--background-secondary);
+
+            & img {
+                animation: rotate 1.25s infinite linear;
+            }
+
+            &::before {
+                animation: animateBorder 400ms infinite alternate linear backwards;
+                visibility: visible;
+            }
+
+        }
+    }
+
+    .btn-container {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+
+    }
+
+    & .btn-back,
+    & .btn-reset {
+        all: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 3.5rem;
+        background-color: var(--background-tertiary);
+        border-radius: 8px;
+        gap: .5rem;
+        color: var(--content-primary);
+        font: var(--text-label-small);
+        cursor: pointer;
+
+        & img {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+
+        &:hover {
+            background-color: var(--background-secondary);
+        }
     }
 }
+
+
 
 
 @keyframes fadeIn {
@@ -52,5 +143,25 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width: 48em) {
+    .result-container {
+        max-width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: .625rem;
+    }
+
+    & h3 {
+        font: var(--text-label-small);
     }
 }
