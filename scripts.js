@@ -30,12 +30,12 @@ amounts.forEach(amount => {
 // Função para gerar números aleatórios
 const generateRandomNumbers = (numCount, minValue, maxValue) => {
     const numbers = [];
-    const repetition = !repeat.checked; // Verifica se o checkbox "não repetir" está marcado
+    const repetition = !repeat.checked; // Verifica se o checkbox está marcado
 
     while (numbers.length < numCount) {
         let num = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
 
-        // Verifica se o número ja foi sorteado ou se o checkbox "não repetir" está marcado
+        // Verifica se o número ja foi sorteado ou se o checkbox está marcado
         if (repetition || !numbers.includes(num)) {
             numbers.push(num);
         }
@@ -72,7 +72,7 @@ const newDraw = (event) => {
         const randomNumbers = generateRandomNumbers(numCount, minValue, maxValue);
 
         // Atualiza o conteúdo do elemento 'drawnNumbers' com os números sorteados
-        drawnNumbers.innerHTML = randomNumbers.map(num => `<span class="sorteado">${num}</span>`).join(' ');
+        drawnNumbers.innerHTML = randomNumbers.map(num => `<span class="drawn">${num}</span>`).join('');
 
         // Atualizar contador e exibe o resultado
         sorteioCount++;
