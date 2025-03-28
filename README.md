@@ -1,7 +1,7 @@
 <h1> 🚀 Desafio prático -Sorteador de números</h1>
 
 <p class="lista-imagens" align="center">
-  <img alt="" src="">  
+  <img alt="" src="./assets/readme.png">  
 </p>
 
 ## ✨ Tecnologias
@@ -20,6 +20,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Ao sortear os números devem aparecer, de maneira animada na tela.
 
 Funcionalidades adicionais:
+
 - Botão "Voltar": Permite que o usuário retorne ao formulário para alterar algum item.
 - Botão "Reiniciar": Reseta todos os dados, permitindo que um novo sorteio seja iniciado.
 
